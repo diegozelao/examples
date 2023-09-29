@@ -1,0 +1,19 @@
+{
+  "name": "bun-elysia-example",
+  "version": "1.0.50",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prisma:generate": "bunx prisma generate --schema=./src/external/prisma/schema.prisma",
+    "prisma:init": "bunx prisma migrate dev --name init --schema=./src/external/prisma/schema.prisma",
+    "dev": "bun run --watch src/index.ts"
+  },
+  "dependencies": {
+    "@prisma/client": "5.3.1",
+    "elysia": "latest"
+  },
+  "devDependencies": {
+    "bun-types": "latest",
+    "prisma": "^5.3.1"
+  },
+  "module": "src/index.js"
+}
